@@ -27,7 +27,7 @@ struct WelcomeView: View {
 }
 
 struct WelcomeView_Previews: PreviewProvider {
-    static let store = AppStore(initialState: .init(auth: .init()), reducer: appReducer)
+    static let store = AppStore(initialState: .init(auth: .init(), news: .init()), reducer: appReducer)
     static var previews: some View {
         WelcomeView()
             .environmentObject(store)

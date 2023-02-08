@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ApiManager
 
 final class Configurator {
     static let shared = Configurator()
@@ -13,27 +14,30 @@ final class Configurator {
     private init() {}
     
     func setup() {
-        setupAuthService()
+        registerAuthService()
+        registerApiManager()
+        registerNewsNetworkService()
 //        setupApiManager()
 //        setupNewsNetworkService()
 //        registerImageLoader()
 //        registerImageLoaderService()
     }
     
-    private func setupAuthService() {
+    private func registerAuthService() {
         let authSerice: AuthServiceProtocol = AuthService()
         ServiceLocator.shared.addService(service: authSerice)
     }
-//    private func setupApiManager() {
-//        let apiManager: ApiManagerProtocol = ApiManager.shared
-//        ServiceLocator.shared.addService(service: apiManager)
-//    }
-//    
-//    private func setupNewsNetworkService() {
-//        let newsNetworkService: NewsNetworkServiceProtocol = NewsNetworkService()
-//        ServiceLocator.shared.addService(service: newsNetworkService)
-//    }
-//    
+    
+    private func registerApiManager() {
+        let apiManager: ApiManagerProtocol = ApiManager.shared
+        ServiceLocator.shared.addService(service: apiManager)
+    }
+    
+    private func registerNewsNetworkService() {
+        let newNetworkService: NewsNetworkServiceProtocol = NewsNetworkService()
+        ServiceLocator.shared.addService(service: newNetworkService)
+    }
+    
 //    private func registerImageLoader() {
 //        let imageLoader: ImageLoaderProtocol = ImageLoader.shared
 //        ServiceLocator.shared.addService(service: imageLoader)

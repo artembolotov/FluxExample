@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct FluxExampleApp: App {
-    let store = AppStore(initialState: .init(auth: .init()), reducer: appReducer)
+    let store = AppStore(initialState: .init(auth: .init(), news: .init()), reducer: appReducer)
     
     init() {
         Configurator.shared.setup()
