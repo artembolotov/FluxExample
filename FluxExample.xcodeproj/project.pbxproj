@@ -8,17 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		ABA39BE329914AC20017866C /* FluxExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39BE229914AC20017866C /* FluxExampleApp.swift */; };
-		ABA39BE529914AC20017866C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39BE429914AC20017866C /* ContentView.swift */; };
 		ABA39BE729914AC50017866C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABA39BE629914AC50017866C /* Assets.xcassets */; };
 		ABA39BEA29914AC50017866C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABA39BE929914AC50017866C /* Preview Assets.xcassets */; };
+		ABA39BF129914B080017866C /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39BF029914B080017866C /* Store.swift */; };
+		ABA39BF329915BBD0017866C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39BF229915BBD0017866C /* App.swift */; };
+		ABA39BF529915C040017866C /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39BF429915C040017866C /* Auth.swift */; };
+		ABA39BF92991826E0017866C /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39BF82991826E0017866C /* WelcomeView.swift */; };
+		ABA39BFB299217460017866C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39BFA299217460017866C /* AuthService.swift */; };
+		ABA39BFD29921D130017866C /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39BFC29921D130017866C /* LoginScreen.swift */; };
+		ABA39BFF29935B550017866C /* NewsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39BFE29935B550017866C /* NewsScreen.swift */; };
+		ABA39C0229935D960017866C /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39C0129935D960017866C /* Configurator.swift */; };
+		ABA39C0429935DA10017866C /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39C0329935DA10017866C /* ServiceLocator.swift */; };
+		ABA39C0629935E2B0017866C /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39C0529935E2B0017866C /* Injected.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ABA39BDF29914AC20017866C /* FluxExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FluxExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA39BE229914AC20017866C /* FluxExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxExampleApp.swift; sourceTree = "<group>"; };
-		ABA39BE429914AC20017866C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ABA39BE629914AC50017866C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABA39BE929914AC50017866C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ABA39BF029914B080017866C /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		ABA39BF229915BBD0017866C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		ABA39BF429915C040017866C /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		ABA39BF82991826E0017866C /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		ABA39BFA299217460017866C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		ABA39BFC29921D130017866C /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		ABA39BFE29935B550017866C /* NewsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreen.swift; sourceTree = "<group>"; };
+		ABA39C0129935D960017866C /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
+		ABA39C0329935DA10017866C /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		ABA39C0529935E2B0017866C /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +70,12 @@
 			isa = PBXGroup;
 			children = (
 				ABA39BE229914AC20017866C /* FluxExampleApp.swift */,
-				ABA39BE429914AC20017866C /* ContentView.swift */,
+				ABA39BF82991826E0017866C /* WelcomeView.swift */,
+				ABA39BFC29921D130017866C /* LoginScreen.swift */,
+				ABA39BFE29935B550017866C /* NewsScreen.swift */,
+				ABA39BF429915C040017866C /* Auth.swift */,
+				ABA39C0729935ECB0017866C /* Services */,
+				ABA39C0029935D730017866C /* Common */,
 				ABA39BE629914AC50017866C /* Assets.xcassets */,
 				ABA39BE829914AC50017866C /* Preview Content */,
 			);
@@ -65,6 +88,26 @@
 				ABA39BE929914AC50017866C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ABA39C0029935D730017866C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				ABA39BF229915BBD0017866C /* App.swift */,
+				ABA39BF029914B080017866C /* Store.swift */,
+				ABA39C0129935D960017866C /* Configurator.swift */,
+				ABA39C0329935DA10017866C /* ServiceLocator.swift */,
+				ABA39C0529935E2B0017866C /* Injected.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		ABA39C0729935ECB0017866C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ABA39BFA299217460017866C /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +180,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABA39BE529914AC20017866C /* ContentView.swift in Sources */,
+				ABA39BFF29935B550017866C /* NewsScreen.swift in Sources */,
+				ABA39C0229935D960017866C /* Configurator.swift in Sources */,
+				ABA39BF529915C040017866C /* Auth.swift in Sources */,
+				ABA39C0629935E2B0017866C /* Injected.swift in Sources */,
+				ABA39BF92991826E0017866C /* WelcomeView.swift in Sources */,
+				ABA39BF129914B080017866C /* Store.swift in Sources */,
+				ABA39BFB299217460017866C /* AuthService.swift in Sources */,
+				ABA39C0429935DA10017866C /* ServiceLocator.swift in Sources */,
+				ABA39BFD29921D130017866C /* LoginScreen.swift in Sources */,
+				ABA39BF329915BBD0017866C /* App.swift in Sources */,
 				ABA39BE329914AC20017866C /* FluxExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +327,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +357,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

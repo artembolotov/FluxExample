@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct FluxExampleApp: App {
+    let store = AppStore(initialState: .init(auth: .init()), reducer: appReducer)
+    
+    init() {
+        Configurator.shared.setup()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomeView()
+                .environmentObject(store)
         }
     }
 }
