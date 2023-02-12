@@ -56,5 +56,10 @@ public struct Article: Codable, Hashable, Identifiable {
         try container.encodeIfPresent(summary, forKey: .summary)
         try container.encodeIfPresent(publishedAt, forKey: .publishedAt)
     }
+    
+    
+    static var testArticle: Article {
+        Article(id: 17663, featured: false, title: "L3Harris to acquire Aerojet Rocketdyne for $4.7 billion", url: "https://spacenews.com/l3harris-to-acquire-aerojet-rocketdyne-for-4-7-billion/", imageUrl: "https://spacenews.com/wp-content/uploads/2015/11/RS-25-engines-factory.jpg", newsSite: "SpaceNews", summary: "L3Harris Technologies on Dec. 18 announced an agreement to acquire Aerojet Rocketdyne for $4.7 billion.", publishedAt: "2022-12-18T23:11:46.000Z")
+    }
 }
 

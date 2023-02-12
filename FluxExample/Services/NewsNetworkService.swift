@@ -9,7 +9,7 @@ import Foundation
 import ApiManager
 
 protocol NewsNetworkServiceProtocol {
-    func articlesGet(limit: Int, start: Int, completion: @escaping ([Article]?) -> Void)
+    func articlesGet(source: NewsSite, limit: Int, start: Int) async -> [Article]
 }
 
 final class NewsNetworkService: NewsNetworkServiceProtocol {
@@ -18,12 +18,20 @@ final class NewsNetworkService: NewsNetworkServiceProtocol {
     
     private let url = "https://api.spaceflightnewsapi.net/v3"
     
-    func articlesGet(limit: Int, start: Int, completion: @escaping ([Article]?) -> Void) {
+    func articlesGet(source: NewsSite, limit: Int, start: Int) async -> [Article] {
         let fullUrl = url + "/articles"
         let parameters = [
             "_limit": "\(limit)",
-            "_start": "\(start)"
+            "_start": "\(start)",
+            "newsSite": "\(source.rawValue)"
         ]
-        apiManager.fetch(url: fullUrl, parameters: parameters, handler: completion)
+        
+        return await withCheckedContinuation({ continuation in
+            let handler: ([Article]?) -> Void = { articles in
+                continuation.resume(returning: articles ?? [])
+            }
+             
+            apiManager.fetch(url: fullUrl, parameters: parameters, handler: handler)
+        })
     }
 }

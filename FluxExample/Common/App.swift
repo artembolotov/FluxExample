@@ -18,18 +18,32 @@ enum AppAction {
     case news(_ action: NewsAction)
 }
 
-func appReducer(state: inout AppState, action: AppAction) -> AnyPublisher<AppAction, Never> {
+func appReducer(state: AppState, action: AppAction) -> AppState {
+    var state = state
     switch action {
     case let .auth(action: action):
-        return authReducer(state: &state.auth, action: action)
-            .map(AppAction.auth)
-            .eraseToAnyPublisher()
+        state.auth = authReducer(state: state.auth, action: action)
+        
+        if action == .logout {
+            state.news = .init()
+        }
     case let .news(action: action):
-        return newsReducer(state: &state.news, action: action)
-            .map(AppAction.news)
-            .eraseToAnyPublisher()
+        state.news = newsReducer(state: state.news, action: action)
     }
-    //return Empty().eraseToAnyPublisher()
+    return state
+}
+
+let appMiddleware: Middleware<AppState, AppAction> = { state, action in
+    switch action {
+    case .news(let action):
+        if let newsAction = await newsMiddleware(state.news, action) {
+            return AppAction.news(newsAction)
+        }
+    default:
+        return nil
+    }
+    
+    return nil
 }
 
 typealias AppStore = Store<AppState, AppAction>

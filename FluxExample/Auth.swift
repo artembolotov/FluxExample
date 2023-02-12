@@ -20,8 +20,9 @@ enum AuthAction {
     case login, logout, check
 }
 
-func authReducer(state: inout AuthState, action: AuthAction) -> AnyPublisher<AuthAction, Never> {
+func authReducer(state: AuthState, action: AuthAction) -> AuthState {
     @Injected var authService: AuthServiceProtocol
+    var state = state
     
     switch action {
     case .check:
@@ -34,5 +35,6 @@ func authReducer(state: inout AuthState, action: AuthAction) -> AnyPublisher<Aut
         authService.logout()
         state.state = .notAuthentificated
     }
-    return Empty().eraseToAnyPublisher()
+    
+    return state
 }

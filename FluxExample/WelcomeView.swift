@@ -21,13 +21,13 @@ struct WelcomeView: View {
             }
         }
         .onAppear {
-            store.send(.auth(.check))
+            Task { await store.send(.auth(.check)) }
         }
     }
 }
 
 struct WelcomeView_Previews: PreviewProvider {
-    static let store = AppStore(initialState: .init(auth: .init(), news: .init()), reducer: appReducer)
+    static let store = AppStore(initialState: .init(auth: .init(), news: .init()), reducer: appReducer, middleware: appMiddleware)
     static var previews: some View {
         WelcomeView()
             .environmentObject(store)

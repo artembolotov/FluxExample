@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB3B75C02998B3B000A8B349 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B75BF2998B3B000A8B349 /* ArticleCell.swift */; };
+		AB3B75C22998B45700A8B349 /* OpenISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3B75C12998B45700A8B349 /* OpenISO8601DateFormatter.swift */; };
 		AB57139D29936D8F003A2583 /* ApiManager in Frameworks */ = {isa = PBXBuildFile; productRef = AB57139C29936D8F003A2583 /* ApiManager */; };
 		ABA39BE329914AC20017866C /* FluxExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39BE229914AC20017866C /* FluxExampleApp.swift */; };
 		ABA39BE729914AC50017866C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABA39BE629914AC50017866C /* Assets.xcassets */; };
@@ -21,12 +23,16 @@
 		ABA39C0229935D960017866C /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39C0129935D960017866C /* Configurator.swift */; };
 		ABA39C0429935DA10017866C /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39C0329935DA10017866C /* ServiceLocator.swift */; };
 		ABA39C0629935E2B0017866C /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA39C0529935E2B0017866C /* Injected.swift */; };
+		ABAACA0529961499001C3E50 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAACA0429961499001C3E50 /* Extensions.swift */; };
 		ABDC8D4E299370760091BC21 /* NewsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC8D4D299370760091BC21 /* NewsNetworkService.swift */; };
 		ABDC8D51299370A70091BC21 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC8D50299370A70091BC21 /* Article.swift */; };
 		ABDC8D532993722A0091BC21 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC8D522993722A0091BC21 /* News.swift */; };
+		ABDC8D57299426920091BC21 /* NewsSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC8D56299426920091BC21 /* NewsSite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB3B75BF2998B3B000A8B349 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		AB3B75C12998B45700A8B349 /* OpenISO8601DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenISO8601DateFormatter.swift; sourceTree = "<group>"; };
 		AB57139929936D33003A2583 /* ApiManager */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ApiManager; path = Modules/ApiManager; sourceTree = "<group>"; };
 		ABA39BDF29914AC20017866C /* FluxExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FluxExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA39BE229914AC20017866C /* FluxExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxExampleApp.swift; sourceTree = "<group>"; };
@@ -42,9 +48,11 @@
 		ABA39C0129935D960017866C /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		ABA39C0329935DA10017866C /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		ABA39C0529935E2B0017866C /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
+		ABAACA0429961499001C3E50 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		ABDC8D4D299370760091BC21 /* NewsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsNetworkService.swift; sourceTree = "<group>"; };
 		ABDC8D50299370A70091BC21 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		ABDC8D522993722A0091BC21 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		ABDC8D56299426920091BC21 /* NewsSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 				ABA39BFE29935B550017866C /* NewsScreen.swift */,
 				ABA39BF429915C040017866C /* Auth.swift */,
 				ABDC8D522993722A0091BC21 /* News.swift */,
+				AB3B75BF2998B3B000A8B349 /* ArticleCell.swift */,
 				ABDC8D4F299370960091BC21 /* Models */,
 				ABA39C0729935ECB0017866C /* Services */,
 				ABA39C0029935D730017866C /* Common */,
@@ -126,6 +135,8 @@
 				ABA39C0129935D960017866C /* Configurator.swift */,
 				ABA39C0329935DA10017866C /* ServiceLocator.swift */,
 				ABA39C0529935E2B0017866C /* Injected.swift */,
+				ABAACA0429961499001C3E50 /* Extensions.swift */,
+				AB3B75C12998B45700A8B349 /* OpenISO8601DateFormatter.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -143,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				ABDC8D50299370A70091BC21 /* Article.swift */,
+				ABDC8D56299426920091BC21 /* NewsSite.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,12 +237,16 @@
 				ABA39C0229935D960017866C /* Configurator.swift in Sources */,
 				ABA39BF529915C040017866C /* Auth.swift in Sources */,
 				ABDC8D532993722A0091BC21 /* News.swift in Sources */,
+				AB3B75C22998B45700A8B349 /* OpenISO8601DateFormatter.swift in Sources */,
 				ABDC8D4E299370760091BC21 /* NewsNetworkService.swift in Sources */,
 				ABA39C0629935E2B0017866C /* Injected.swift in Sources */,
 				ABA39BF92991826E0017866C /* WelcomeView.swift in Sources */,
 				ABA39BF129914B080017866C /* Store.swift in Sources */,
 				ABA39BFB299217460017866C /* AuthService.swift in Sources */,
 				ABA39C0429935DA10017866C /* ServiceLocator.swift in Sources */,
+				ABAACA0529961499001C3E50 /* Extensions.swift in Sources */,
+				AB3B75C02998B3B000A8B349 /* ArticleCell.swift in Sources */,
+				ABDC8D57299426920091BC21 /* NewsSite.swift in Sources */,
 				ABA39BFD29921D130017866C /* LoginScreen.swift in Sources */,
 				ABA39BF329915BBD0017866C /* App.swift in Sources */,
 				ABA39BE329914AC20017866C /* FluxExampleApp.swift in Sources */,

@@ -11,15 +11,13 @@ struct LoginScreen: View {
     @EnvironmentObject var store: AppStore
     var body: some View {
         Button("Login") {
-            withAnimation {
-                store.send(.auth(.login))
-            }
+            Task { await store.send(.auth(.login)) }
         }
     }
 }
 
 struct LoginScreen_Previews: PreviewProvider {
-    static let store = AppStore(initialState: .init(auth: .init(), news: .init()), reducer: appReducer)
+    static let store = AppStore(initialState: .init(auth: .init(), news: .init()), reducer: appReducer, middleware: appMiddleware)
     
     static var previews: some View {
         LoginScreen()
